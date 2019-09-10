@@ -4,8 +4,9 @@
   "description": "",
   "main": "build",
   "scripts": {
-    "start": "nodemon",
+    "start": "node .",
     "build": "tsc",
+    "postinstall": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
