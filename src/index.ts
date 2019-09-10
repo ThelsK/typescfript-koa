@@ -16,8 +16,8 @@ const app = createKoaServer({
   ],
   authorizationChecker: (action: Action) => {
     const args = action.request.headers.authorization.split(" ")
-    return (args && args[0] === "Bearer" && args[1] && verify(args[1])
-      && true) || false
+    return args && args[0] === "Bearer" && args[1] && verify(args[1])
+      && true || false
   }
 })
 
